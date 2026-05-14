@@ -1,21 +1,33 @@
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { db } from '@/api/dataService';
+import { supabase } from '@/api/supabaseClient'; 
 import { Quote } from 'lucide-react';
 
-// Fix #3: Spotlight is now separately managed — admin chooses up to 4 players from the Spotlight entity
 const PlayerSpotlight = () => {
   const [activePlayer, setActivePlayer] = useState(0);
 
-  const { data: spotlights = [], isLoading } = useQuery({
+  const { data: spotlights = [], isLoading: isLoadingSpotlights } = useQuery({
     queryKey: ['spotlights'],
     queryFn: () => db.Spotlight.list('order'),
   });
 
-  const { data: allPlayers = [] } = useQuery({
-    queryKey: ['players'],
-    queryFn: () => db.Player.list(),
+  const { data: allPlayers = [], isLoading: isLoadingPlayers } = useQuery({
+    queryKey: ['public_players'],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('public_players')
+        .select('*');
+      
+      if (error) {
+        console.error('Error fetching public players:', error);
+        throw error;
+      }
+      return data || [];
+    },
   });
+
+  const isLoading = isLoadingSpotlights || isLoadingPlayers;
 
   const getPlayer = (id) => allPlayers.find(p => p.id === id);
 
@@ -46,7 +58,8 @@ const PlayerSpotlight = () => {
   }
 
   const currentPlayer = players[Math.min(activePlayer, players.length - 1)];
-  const getFullName = (p) => p.full_name || `${p.first_name || ''} ${p.last_name || ''}`.trim() || 'Unnamed Player';
+  
+  const getFullName = (p) => p.full_name || 'Unnamed Player';
 
   return (
     <div className="py-20 px-4" style={{ backgroundColor: '#0f172a' }}>
