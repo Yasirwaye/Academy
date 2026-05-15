@@ -6,6 +6,7 @@ import PageNotFound from './lib/PageNotFound';
 import { SupabaseAuthProvider } from '@/lib/SupabaseAuthContext';
 import { ErrorBoundary } from '@/lib/errorBoundary';
 import Landing from './pages/Landing';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             </Routes>
           </Router>
           <Toaster />
+          <Analytics />
         </QueryClientProvider>
       </SupabaseAuthProvider>
     </ErrorBoundary>
