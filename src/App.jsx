@@ -6,6 +6,13 @@ import PageNotFound from './lib/PageNotFound';
 import { SupabaseAuthProvider } from '@/lib/SupabaseAuthContext';
 import { ErrorBoundary } from '@/lib/errorBoundary';
 import Landing from './pages/Landing';
+import AboutUs from './pages/AboutUs';
+import Programs from './pages/Programs';
+import Coaches from './pages/Coaches';
+import FAQ from './pages/FAQ';
+import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 function App() {
   return (
@@ -15,6 +22,13 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<Landing />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/programs" element={<Programs />} />
+              <Route path="/coaches" element={<Coaches />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </Router>

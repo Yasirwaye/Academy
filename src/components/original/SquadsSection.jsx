@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { db } from '@/api/dataService';
-import { supabase } from '@/api/supabaseClient'; // Import supabase for the public view
+import { supabase } from '@/api/supabaseClient'; 
 
-// Fix #1: Updated formations to use valid DB position codes (RW/LW instead of RM/LM)
 const FORMATIONS = {
   '4-3-3': { rows: [['GK'], ['RB', 'CB', 'CB', 'LB'], ['CM', 'CM', 'CM'], ['RW', 'ST', 'LW']] },
   '4-4-2': { rows: [['GK'], ['RB', 'CB', 'CB', 'LB'], ['RW', 'CM', 'CM', 'LW'], ['ST', 'ST']] },
@@ -34,7 +33,6 @@ const SquadsSection = () => {
     queryFn: () => db.Squad.list(),
   });
 
-  // FIX: Query public_players view instead of players table
   const { data: players = [] } = useQuery({
     queryKey: ['public_players'],
     queryFn: async () => {
