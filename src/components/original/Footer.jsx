@@ -59,7 +59,7 @@ const Footer = () => {
                     href="mailto:info@eastleighfc.com" 
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
-                    info@eastleighfc.com
+                    eastleigh_unitedfc.com
                   </a>
                 </div>
               </li>
@@ -71,7 +71,7 @@ const Footer = () => {
                     href="tel:+15551234567" 
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
-                    +1 (555) 123-4567
+                    +254 722 218 608
                   </a>
                 </div>
               </li>
@@ -79,7 +79,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-400 text-sm">Location:</p>
-                  <p className="text-gray-300 text-sm">Eastleigh, UK</p>
+                  <p className="text-gray-300 text-sm">Nairobi, Eastleigh</p>
                 </div>
               </li>
             </ul>
@@ -101,7 +101,7 @@ const Footer = () => {
               
               {/* Twitter */}
               <a 
-                href="https://www.twitter.com" 
+                href="https://www.threads.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#1DA1F2]/20 hover:bg-[#1DA1F2] flex items-center justify-center text-[#1DA1F2] hover:text-white transition-all duration-300"
