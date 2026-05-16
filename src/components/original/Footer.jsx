@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Add this import
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, MessageCircle, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 
 const quickLinks = [
   { label: 'About Us', to: '/about' },
@@ -82,10 +82,10 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-400 text-sm">Email:</p>
                   <a 
-                    href="mailto:eastleigh_unitedfc.com" 
+                    href="mailto:eastleighuniteda@gmail.com" 
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
-                    eastleigh_unitedfc.com
+                    eastleighuniteda@gmail.com
                   </a>
                 </div>
               </li>
@@ -125,16 +125,16 @@ const Footer = () => {
               </a>
               
               <a 
-                href="https://www.twitter.com" 
+                href="https://whatsapp.com/channel/0029VbCDl4Z42Dcm9wOne72n" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#1DA1F2]/20 hover:bg-[#1DA1F2] flex items-center justify-center text-[#1DA1F2] hover:text-white transition-all duration-300"
               >
-                <Twitter className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
               </a>
               
               <a 
-                href="https://www.instagram.com" 
+                href="https://www.instagram.com/eastleigh_united__academy?igsh=MXM5ZGo0ZWMxN3ZsdQ==" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600/20 to-pink-500/20 hover:from-purple-600 hover:to-pink-500 flex items-center justify-center text-pink-500 hover:text-white transition-all duration-300"

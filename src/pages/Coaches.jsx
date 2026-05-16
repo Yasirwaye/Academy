@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const coaches = [
-  { name: 'Head Coach', role: 'Technical Director', bio: 'UEFA Pro License holder with 15+ years developing elite youth talent across Africa and Europe.' },
+  { name: 'Head Coach', role: 'Technical Director', bio: 'UEFA Pro License holder with 5+ years developing elite youth talent across Africa and Europe.' },
   { name: 'Fitness Coach', role: 'Strength & Conditioning', bio: 'Specialist in youth athletic development with a background in sports science and injury prevention.' },
   { name: 'Goalkeeping Coach', role: 'GK Specialist', bio: 'Former professional goalkeeper bringing hands-on experience to the next generation of shot-stoppers.' },
   { name: 'Youth Coach', role: 'Junior Academy Lead', bio: 'Passionate about grassroots football and creating a fun, competitive environment for young players.' },
